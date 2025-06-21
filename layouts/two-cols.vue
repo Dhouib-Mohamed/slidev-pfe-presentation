@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import SlideNumber from '../components/SlideNumber.vue'
+</script>
+
 <template>
   <div class="slidev-layout">
     <div class="grid grid-cols-2 gap-16">
@@ -9,4 +13,6 @@
       </div>
     </div>
   </div>
+
+  <SlideNumber />
 </template>

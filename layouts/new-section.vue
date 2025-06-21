@@ -1,14 +1,24 @@
+<script setup lang="ts">
+import SlideNumber from '../components/SlideNumber.vue'
+import ChapterSlider from "../components/ChapterSlider.vue";
+import CornerCurves from "../components/corner-curves/CornerCurves.vue";
+</script>
+
 <template>
+  <ChapterSlider />
+  <CornerCurves class="absolute left-0 top-0 transform rotate-90" />
   <div class="bg-section slidev-layout new-section">
-    <CornerCurves class="absolute left-0 top-0 transform rotate-90" />
-    <div class="flex flex-col justify-center text-center">
-      <slot></slot>
+    <div class="flex justify-center text-center items-center" style="align-items: center">
+      <div class="prose w-3/4">
+        <slot></slot>
+      </div>
     </div>
-    <AsGraphic
+  </div>
+  <AsGraphic
       type="zigzag"
       class="absolute top-20 -right-30"
-    />
-  </div>
+  />
+  <SlideNumber />
 </template>
 
 <style>

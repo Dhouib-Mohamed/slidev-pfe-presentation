@@ -1,7 +1,7 @@
-import { fonts, rules, shortcuts, theme, typography } from '@alvarosabu/ui'
 import type {
   Preset,
 } from 'unocss'
+import { fonts, rules, shortcuts, theme, typography } from '@alvarosabu/ui'
 import {
   defineConfig,
   presetTypography,

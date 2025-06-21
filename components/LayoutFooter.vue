@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { computed } from 'vue'
 import { useNow } from '@vueuse/core'
+import { computed } from 'vue'
 
 defineProps({
   eventLogo: {

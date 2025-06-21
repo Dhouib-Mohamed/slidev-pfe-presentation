@@ -1,30 +1,44 @@
+<script setup lang="ts">
+import CornerCurves from '../components/corner-curves/CornerCurves.vue';
+import SlideNumber from '../components/SlideNumber.vue'
+import ChapterSlider from '../components/ChapterSlider.vue';
+</script>
+
 <template>
+  <ChapterSlider />
   <div class="slidev-layout">
+    <CornerCurves class="absolute bottom-0 right-0 transform scale-x--100" />
     <div
-      class="grid grid-cols-2"
+      class="grid grid-cols-10"
       :class="$attrs.reverse ? 'gap-16' : 'gap-8'"
     >
       <div
-        class="prose pr-16"
-        :class="{ 'order-1': $attrs.reverse }"
+          class="prose"
+        :class="[
+              $attrs.imgSmall ? 'col-span-6' : 'col-span-4',
+              { 'order-1': $attrs.reverse }
+            ]"
       >
-        <slot name="default"></slot>
+        <div class="my-auto z-10 relative">
+          <slot name="default"></slot>
+        </div>
       </div>
-      <figure class="relative flex flex-col justify-center">
-        <AsGraphic
-          type="zigzag"
-          absolute
-          bottom-4
-          right-0
-        />
+      <figure v-click  class="relative flex flex-col justify-center items-center" :class="$attrs.imgSmall ? 'col-span-4' : 'col-span-6'">
         <img
           :src="$attrs.media"
-          class="rounded-lg shadow-lg object-cover z-10"
+          class="rounded-lg object-cover w-full"
         />
-        <figcaption class="mt-2 text-xs w-full">
+        <figcaption class="mt-2 text-5 w-full text-center font-bold">
           {{ $attrs.caption }}
         </figcaption>
+        <img
+          v-if="$attrs.additionalImg"
+          :src="$attrs.additionalImg"
+          class="rounded-lg object-cover w-full"
+        />
       </figure>
     </div>
   </div>
+
+  <SlideNumber />
 </template>

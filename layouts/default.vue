@@ -1,4 +1,10 @@
+<script setup lang="ts">
+import ChapterSlider from '../components/ChapterSlider.vue'
+import SlideNumber from '../components/SlideNumber.vue'
+</script>
+
 <template>
+  <ChapterSlider />
   <div
     class="slidev-layout"
     :class="{ grid: $attrs.center }"
@@ -8,4 +14,6 @@
       <slot></slot>
     </div>
   </div>
+
+  <SlideNumber />
 </template>
