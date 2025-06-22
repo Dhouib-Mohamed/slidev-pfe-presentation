@@ -38,8 +38,8 @@ imgSmall: true
 # Hosting Company
 
 **Revolutionizing cloud storage:**
-- Unlimited hot storage 
-- Optimized for highest durability
+- Hot storage 
+- Durability
 - S3 API compatibility
 
 ---
@@ -52,11 +52,10 @@ zoom: 1.15
 ---
 # Team Integration
 
-Infrastructure team Responsible for:
-- Platform architecture and scaling
-- Infrastructure provisioning and automation
-- Site reliability engineering (SRE) practices
-- Observability systems management
+- Platform 
+- Infrastructure 
+- _Site reliability engineering_
+- _Observability systems_
 
 ---
 layout: title
@@ -66,21 +65,6 @@ zoom: 1.15
 
 chapter: 'Problem Analysis'
 ---
----
-layout: text-image
-zoom: 1.15
-hideInToc: true
-media: '/images/observability.jpg'
-imgSmall: true
-
----
-# Abstract
-* Modern Cloud Systems: Distributed & Complex
-* => Observability as a Requirement
-* Distributed Systems Scale
-* => Observability Stack Must also Scale
-
-==> **Performance, Cost, Reliability Challenges**
 ---
 layout: default
 zoom: 1.15
@@ -112,7 +96,7 @@ hideInToc: true
   <div v-click class="flex">
     <span class="underline decoration-dashed decoration-green-500 font-bold">Observability : </span>
     <span class="w-2"></span>
-    <span> Distributed Logging, Metrics and logging</span>
+    <span> Distributed Logging, Metrics and tracing</span>
   </div>
 
 
@@ -136,7 +120,6 @@ Scaling our observability stack introduces:
 * Soaring Costs
 * Performance Bottlenecks
 * Data Reliability
-* Operational Burden
 
 ---
 layout: text-image
@@ -152,7 +135,6 @@ Enhance observability efficiency and reliability in our decentralized cloud:
 * Reduce Costs
 * Improve Performance
 * Ensure Reliability
-* Streamline Operations
 ---
 layout: default
 zoom: 1.15
@@ -192,25 +174,31 @@ chapter: 'Track 1: Tempo Cost Reduction'
 layout: text-image
 zoom: 1.15
 imgSmall: true
-media: '/images/track1/costs.png'
+media: '/images/track1/tempo_costs.png'
 hideInToc: true
 
 ---
 # Introduction:
 
-* Significant operational costs of Tempo
-* **Goal:** Achieve substantial financial savings without compromising diagnostic value
+Significant operational costs of Tempo:
+- ~60% of total costs
+
+**Goal:** Achieve substantial financial savings without compromising diagnostic value
+---
+layout: image
+zoom: 1.15
+media: '/images/track1/old_arch.png'
+caption: 'Tempo Architecture'
+---
 ---
 layout: text-image
 zoom: 1.15
 hideInToc: true
 reverse: true
 media: '/images/track1/cost_distribution.png'
-
 ---
 # Problem Analysis:
 
-The most expensive observability component (~60% of total costs).
 * 97% of Tempo costs from AWS Get Object.
 
 ---
@@ -232,21 +220,14 @@ hideInToc: true
 # Root Cause Determination
 
 **AWS S3 Cost Structure:**
-* Egress Outside AWS S3 Network: $0.085/GB.
-* Egress Within AWS S3 Network: $0.000/GB.
+* Egress Outside AWS S3 Network is Charged heavily
+* Egress within AWS S3 Network is Free
 
 **Compactor Component Behavior:**
 
-Each compaction cycle:
 * Full scans of trace data in S3
 * Rewrites optimized blocks back to S3
 
----
-layout: image
-zoom: 1.15
-media: '/images/track1/old_arch.png'
-caption: 'Tempo Old Architecture'
----
 ---
 layout: new-section
 zoom: 1.15
@@ -279,7 +260,6 @@ hideInToc: true
 media: '/images/track1/results.png'
 ---
 # Results and Impact
-* **Smooth Migration**: Zero downtime; full monitoring preservation
 * **Cost Reduction**: 96% reduction in monthly Tempo costs
 ---
 zoom: 1.15
@@ -303,7 +283,7 @@ layout: text-image
 zoom: 1.15
 imgSmall: false
 hideInToc: true
-media: '/images/track2/perf.jpg'
+media: '/images/track2/mimir_grafana.png'
 ---
 # Introduction
 
@@ -315,13 +295,13 @@ zoom: 1.15
 hideInToc: true
 
 ---
-# Problem Analysis: High Query Latency
+# Problem Analysis
 
 Significant Grafana dashboard loading times (>60s):
 * Degraded user experience 
-* Operational efficiency for monitoring
+* Degraded monitoring efficiency
 
-Reason: 
+**Reason:** 
 high cardinality queries
 
 ---
@@ -335,7 +315,7 @@ Structured test framework crucial for accurate measurement and validation
 
 **Assessment Metrics:**
 * Average Query Latency
-* Dashboard Visual Consistency & Overall Behavior
+* Dashboard Visual Consistency
 ---
 zoom: 1.15
 hideInToc: true
@@ -344,12 +324,12 @@ hideInToc: true
 # Experiment Methodology
 
 **Custom script:**
-  * Periodic high-cardinality PromQL queries.
-  * latency data saved in `.csv` for analysis.
+  * Periodic high-cardinality queries.
+  * latency data saved for analysis.
 
 **Grafana Dashboards Manual Test:**
-  * Manually loaded a dashboard with problematic queries
-  * Recorded loading times & checked for vizual inconsistencies
+  * Manually loaded a problematic dashboard
+  * Recorded loading times & checked for visual inconsistencies
 ---
 zoom: 1.15
 hideInToc: true
@@ -364,7 +344,7 @@ media: '/images/track2/initial_results.png'
 
 **Results:** Minimal improvement (\~5%)
 
-=> Fine-tuning insufficient; deemed inadequate.
+=> Fine-tuning insufficient
 
 ---
 layout: default
@@ -376,7 +356,7 @@ hideInToc: true
 
 **Production Tracing:** Collecting spans for slow queries
 
-**Production Profiling (CPU & Memory):** 
+**Production Profiling:** 
   * Memory profiling
   * CPU profiling
 
@@ -407,7 +387,7 @@ media: '/images/track2/final_results.png'
 
 # Results
 
-* significant latency reduction for high-cardinality queries
+* Significant latency reduction for high-cardinality queries
 * Problematic dashboard latency reduced \~17-19%
 * No visual inconsistencies observed
 
@@ -420,8 +400,7 @@ imgSmall: true
 ---
 
 # Outcome: Upstream Integration Attempt
-
-Pull Request (PR) submitted to Mimir upstream, but not merged
+We decided to implement the solution as a middleware in Mimir query frontend
 
 **Reasons for Non-Integration:**
 * Prometheus API incompatibility
@@ -434,8 +413,6 @@ hideInToc: true
 **Key Achievements:**
 * Understanding Mimir system internals
 * Solution Logic for dynamic step handling
-
-**Lessons Learned:** Importance of aligning solutions with open-source project philosophy
 
 **Future work:** Explore other ways of implementing dynamic step logic
 
@@ -450,10 +427,11 @@ chapter: 'Track 3: Telemetry Failover Management'
 zoom: 1.15
 hideInToc: true
 layout: text-image
-media: '/images/track3/pipeline-problem.webp'
+media: '/images/track3/arch.png'
 ---
 # Introduction
 
+* Inherent reality in distributed environments: unavailability scenarios
 * Critical problem of data loss during unavailabilities
 * **Goal:** Enhance reliability of telemetry data delivery
 
@@ -462,31 +440,11 @@ zoom: 1.15
 hideInToc: true
 
 ---
-# Comprehensive Problem Analysis
-
-* Inherent reality in distributed environments: unavailability scenarios
-* Collectors consistently fail to deliver all data during outages
-* Central LGTM stack often acts as a **single point of failure**
-
----
-zoom: 1.15
-hideInToc: true
-
----
 # Root Causes Analysis
 
-Intrinsic deficiencies within collectors' native buffering and retry mechanisms:
+Collectors Inefficiencies not made for extended outages:
 * Heavy Memory Dependency
 * Incomplete Disk Persistence
-* Limited Reliability for Prolonged Outages
-
----
-layout: image
-zoom: 1.15
-media: '/images/track3/initial_arch.png'
-hideInToc: true
-caption: 'Current Telemetry Flow'
----
 
 ---
 zoom: 1.15
@@ -494,9 +452,8 @@ hideInToc: true
 ---
 # Critical Impact of the Problem
 
-* Severe threat to operational capabilities and service reliability
-* Operational Blind Spots, Slower Troubleshooting
-* Customer Support Impact
+* Slower Troubleshooting
+* Customer Support Degredation
 * Regulatory Compliance Risks
 
 ---
@@ -508,56 +465,44 @@ hideInToc: true
 ---
 # Solution Logic
 
-* conditional routing layer based on LGTM health status
-
-* Data in Failover Queue buffered to LGTM once services restore
+conditional routing layer based on Observability health status
 
 ---
 zoom: 1.15
 hideInToc: true
+layout: text-image
+media: '/images/track3/alloy.png'
+additionalImg: '/images/track3/fluentbit.png'
+imgSmall: true
 
 ---
 # Implementation Strategy
 
-Includes Implementing for:
-* **Grafana Alloy**: Hot Reload capability for dynamic routing
-* **Fluent Bit**: Internal conditional logic via injected script
+For all used collectors:
+* **Grafana Alloy**
+* **Fluent Bit**
 
 ---
 zoom: 1.15
 hideInToc: true
+layout: text-image
+media: '/images/track3/alloy_workflow.png'
+
 
 ---
 # Grafana Alloy Implementation
 
-#### Hot reload-based dynamic routing
-
-**Mechanism:**
-  * External script performs health checks on LGTM
-  * External script update collector config via hot reload
-  * Collector reload config and routes data conditionally based on current config
-
+Dynamic routing by Hot Reloading the collector configuration
 ---
 zoom: 1.15
 hideInToc: true
+layout: text-image
+media: '/images/track3/fluentbit_workflow.png'
 
 ---
 # FluentBit Implementation
 
-#### conditional logic via _Lua_ filter plugin + lightweight sidecar script
-
-**Mechanism**:
-  * Sidecar performs health checks, writes status to local file
-  * Fluent Bit read status file 
-  * Fluent Bit Conditional _Lua_ filter routes data based on status
----
-zoom: 1.15
-hideInToc: true
-layout: image
-media: '/images/track3/f_solution_arch.png'
-caption: 'Telemetry Failover Solution Architecture'
----
-
+Conditional logic via _Lua_ filter plugin + lightweight sidecar script
 ---
 zoom: 1.15
 hideInToc: true
@@ -594,29 +539,18 @@ chapter: 'Conclusion'
 zoom: 1.15
 hideInToc: true
 ---
-# Summary of Achievements
-* **Track 1:** Achieved 96% cost reduction in Tempo
-* **Track 2:** Reduced Mimir query latency by 17-19% ( not integrated )
-* **Track 3:** Ensuring reliable data delivery during outages
-
----
-zoom: 1.15
-hideInToc: true
----
-# Key Takeaways
-* **Cost Efficiency:** Strategic infrastructure changes can yield significant cost savings
-* **Performance Optimization:** Tailored solutions can enhance system performance without compromising functionality
-* **Collaboration:** Working closely with open-source communities is essential for successful integration and adoption of solutions
-
+# Achievements
+* **Track 1:** 96% cost reduction in Tempo
+* **Track 2:** 20% dashboard latency reduction ( Not Integrated )
+* **Track 3:** Reliable telemetry delivery during outages
 ---
 zoom: 1.15
 hideInToc: true
 ---
 # Future Directions
-* **Track 1:** Explore further optimizations across other observability components
-* **Track 2:** Investigate alternative implementations of dynamic step logic for Mimir
-* **Track 3:** Continue enhancing telemetry failover strategies and health check mechanisms
-
+* **Track 1:** Further optimizations across other observability components
+* **Track 2:** Alternative implementations of dynamic step logic for Mimir
+* **Track 3:** Enhancing telemetry failover strategies and health check mechanisms
 ---
 zoom: 1.15
 hideInToc: true

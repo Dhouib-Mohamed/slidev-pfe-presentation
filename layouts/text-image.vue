@@ -23,10 +23,11 @@ import ChapterSlider from '../components/ChapterSlider.vue';
           <slot name="default"></slot>
         </div>
       </div>
-      <figure v-click  class="relative flex flex-col justify-center items-center" :class="$attrs.imgSmall ? 'col-span-4' : 'col-span-6'">
+      <figure  class="relative flex flex-col justify-center items-center" :class="$attrs.imgSmall ? 'col-span-4' : 'col-span-6'">
         <img
           :src="$attrs.media"
-          class="rounded-lg object-cover w-full"
+          class="rounded-lg object-cover"
+          style="max-height: 30vh; max-width: 100%;"
         />
         <figcaption class="mt-2 text-5 w-full text-center font-bold">
           {{ $attrs.caption }}
@@ -34,7 +35,8 @@ import ChapterSlider from '../components/ChapterSlider.vue';
         <img
           v-if="$attrs.additionalImg"
           :src="$attrs.additionalImg"
-          class="rounded-lg object-cover w-full"
+          class="rounded-lg object-cover"
+          style="margin-top: 50px"
         />
       </figure>
     </div>
