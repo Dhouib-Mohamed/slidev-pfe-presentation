@@ -1,0 +1,145 @@
+/* Professional Theme Enhancements */
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #1d4ed8;
+  --accent-color: #3b82f6;
+  --text-color: #1f2937;
+  --background-light: #f3f4f6;
+}
+
+/* Global Slide Styles */
+.slidev-layout {
+  @apply transition-all duration-300 ease-in-out;
+  color: var(--text-color);
+}
+
+/* Improved Slide Transitions */
+.slidev-vclick-target {
+  transition: all 500ms ease-in-out;
+}
+
+.slidev-vclick-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Slide transition classes */
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-enter-from {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.slide-leave-to {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+/* Content fade effect */
+.content-fade-enter-active,
+.content-fade-leave-active {
+  transition: opacity 0.2s ease;
+  position: absolute;
+  width: 100%;
+}
+
+.content-fade-enter-from,
+.content-fade-leave-to {
+  opacity: 0;
+}
+
+/* Enhanced Headers */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-semibold;
+  background: linear-gradient(120deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Professional Text Styles */
+p {
+  @apply leading-relaxed;
+}
+
+/* Enhanced Lists */
+ul, ol {
+  @apply space-y-2;
+}
+
+li {
+  @apply transition-transform duration-200;
+}
+
+li:hover {
+  @apply transform translate-x-1;
+}
+
+/* Code Block Enhancements */
+pre {
+  @apply rounded-lg shadow-lg !important;
+}
+
+code {
+  @apply text-sm font-mono !important;
+}
+
+/* Image Containers */
+.slidev-layout img {
+  @apply rounded-lg shadow-md transition-transform duration-300;
+}
+
+.slidev-layout img:hover {
+  @apply transform scale-[1.02];
+}
+
+/* Table Enhancements */
+table {
+  @apply rounded-lg overflow-hidden shadow-md;
+}
+
+th {
+  @apply bg-gray-100 text-gray-700 font-semibold;
+}
+
+td {
+  @apply border-b border-gray-200;
+}
+
+/* Button Styles */
+button, .button {
+  @apply rounded-lg px-4 py-2 bg-blue-600 text-white transition-all duration-200;
+}
+
+button:hover, .button:hover {
+  @apply bg-blue-700 transform scale-105;
+}
+
+/* Quote Blocks */
+blockquote {
+  @apply border-l-4 border-blue-500 pl-4 italic bg-gray-50 rounded-r-lg py-2 px-4;
+}
+
+/* Navigation Arrows */
+.slidev-nav-button {
+  @apply opacity-75 hover:opacity-100 transition-opacity duration-200;
+}
+
+/* Progress Bar */
+.slidev-progress-bar {
+  @apply h-1 bg-blue-500;
+}
+
+/* Fix for overlapping content during transitions */
+.slidev-page {
+  position: relative;
+  overflow: hidden;
+}
+
+.slidev-page-content {
+  position: relative;
+  z-index: 1;
+} 

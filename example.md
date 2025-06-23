@@ -5,57 +5,124 @@ layout: intro
 # https://sli.dev/custom/highlighters.html
 highlighter: shiki
 zoom: 1.1
+transition: fade-out
+css: unocss
+background: 'radial-gradient(circle at top left, #2563eb11, transparent), radial-gradient(circle at bottom right, #60a5fa11, transparent)'
 ---
+
+<div class="ultra-glass-card p-12 mb-8 animate-border-glow">
+  <h1 class="ultra-title animate-float mb-8">Improving Observability Efficiency</h1>
+  <h2 class="text-3xl text-blue-600 animate-super-glow font-bold tracking-tight">in a Decentralized Cloud Environment</h2>
+</div>
 
 ---
 layout: section
 zoom: 1
+transition: fade
+background: 'radial-gradient(circle at top right, #3b82f611, transparent), radial-gradient(circle at bottom left, #60a5fa11, transparent)'
 ---
-<div class="text-center mt-2 p-2" style="margin: 1rem 0 3rem 0">
-  <h2 class="text-lg font-bold text-primary-600 dark:text-primary-300">
+<div class="ultra-glass-card animate-scale" style="margin: 2rem auto; max-width: 800px;">
+  <h2 class="ultra-title text-center mb-8 animate-super-glow">
     {{ "Table of Contents" }}
   </h2>
-</div>
-<div style="font-size: 1.3rem; color: #0d3326; padding: 1rem 2rem">
+  <div class="p-6 rounded-2xl bg-white/50 backdrop-blur-sm border border-blue-100 shadow-xl">
     <Toc maxDepth="2"/>
+  </div>
 </div>
 
 ---
 layout: title
 title: "Project Context"
 zoom: 1.15
-
+transition: slide-up
 chapter: 'Project Context'
+background: 'radial-gradient(circle at center, #3b82f611, transparent)'
 ---
 ---
 layout: text-image
 hideInToc: true
 media: '/images/ic.jpeg'
-caption : 'Impossible Cloud Gmbh'
-zoom: 1.15
-imgSmall: true
+caption: 'Impossible Cloud Gmbh'
+class: 'content-center'
+transition: fade
 ---
-# Hosting Company
 
-**Revolutionizing cloud storage:**
-- Hot storage 
-- Durability
-- S3 API compatibility
+<div class="animate-fade-in h-full flex flex-col justify-center">
+  <h1 class="ultra-title mb-3 animate-super-glow">Hosting Company</h1>
+
+  <div class="ultra-glass-card animate-border-glow !py-2 flex-shrink-0">
+    <h3 class="text-lg font-bold text-blue-600 mb-2">Revolutionizing cloud storage:</h3>
+    <ul class="ultra-list !space-y-1.5">
+      <div class="grid grid-cols-1 gap-1.5">
+        <li class="animate-slide-right delay-100 group !py-1.5 !px-3">
+          <div class="flex items-center gap-2">
+            <div class="text-xl text-blue-500 group-hover:scale-110 transition-transform">🚀</div>
+            <div class="min-w-0">
+              <div class="font-bold text-sm">Hot storage</div>
+              <div class="text-xs text-gray-600 truncate">Advanced data storage solutions</div>
+            </div>
+          </div>
+        </li>
+        <li class="animate-slide-right delay-200 group !py-1.5 !px-3">
+          <div class="flex items-center gap-2">
+            <div class="text-xl text-blue-500 group-hover:scale-110 transition-transform">🛡️</div>
+            <div class="min-w-0">
+              <div class="font-bold text-sm">Durability</div>
+              <div class="text-xs text-gray-600 truncate">99.999999999% data durability</div>
+            </div>
+          </div>
+        </li>
+        <li class="animate-slide-right delay-300 group !py-1.5 !px-3">
+          <div class="flex items-center gap-2">
+            <div class="text-xl text-blue-500 group-hover:scale-110 transition-transform">🔄</div>
+            <div class="min-w-0">
+              <div class="font-bold text-sm">S3 API compatibility</div>
+              <div class="text-xs text-gray-600 truncate">Seamless integration with cloud</div>
+            </div>
+          </div>
+        </li>
+      </div>
+    </ul>
+  </div>
+</div>
 
 ---
 layout: text-image
 hideInToc: true
 reverse: true
-imgSmall: true
 media: '/images/infra.png'
-zoom: 1.15
+class: 'content-center'
+transition: slide-up
 ---
-# Team Integration
 
-- Platform 
-- Infrastructure 
-- _Site reliability engineering_
-- _Observability systems_
+<div class="animate-fade-in">
+  <h1 class="ultra-title mb-4 animate-super-glow">Team Integration</h1>
+
+  <div class="ultra-glass-card !py-3">
+    <div class="grid grid-cols-2 gap-3">
+      <div class="ultra-stats !py-2 animate-slide-up delay-100 group">
+        <div class="ultra-number !text-xl group-hover:scale-110 transition-transform">01</div>
+        <div class="font-bold text-blue-600 text-sm">Platform</div>
+        <div class="text-xs text-gray-600">Core infrastructure</div>
+      </div>
+      <div class="ultra-stats !py-2 animate-slide-up delay-200 group">
+        <div class="ultra-number !text-xl group-hover:scale-110 transition-transform">02</div>
+        <div class="font-bold text-blue-600 text-sm">Infrastructure</div>
+        <div class="text-xs text-gray-600">Cloud solutions</div>
+      </div>
+      <div class="ultra-stats !py-2 animate-slide-up delay-300 group">
+        <div class="ultra-number !text-xl group-hover:scale-110 transition-transform">03</div>
+        <div class="font-bold text-blue-600 text-sm">Site Reliability</div>
+        <div class="text-xs text-gray-600">24/7 stability</div>
+      </div>
+      <div class="ultra-stats !py-2 animate-slide-up delay-400 group">
+        <div class="ultra-number !text-xl group-hover:scale-110 transition-transform">04</div>
+        <div class="font-bold text-blue-600 text-sm">Observability</div>
+        <div class="text-xs text-gray-600">Real-time insights</div>
+      </div>
+    </div>
+  </div>
+</div>
 
 ---
 layout: title
@@ -64,6 +131,7 @@ zoom: 1.15
 
 
 chapter: 'Problem Analysis'
+background: 'radial-gradient(circle at center, #3b82f611, transparent)'
 ---
 ---
 layout: default
@@ -562,376 +630,35 @@ hideInToc: true
 zoom: 1.15
 layout: full-image
 media: '/images/thank_you.png'
+background: 'radial-gradient(circle at center, #2563eb11, transparent), radial-gradient(circle at top right, #60a5fa11, transparent), radial-gradient(circle at bottom left, #3b82f611, transparent)'
 ---
-[//]: # ()
-[//]: # (# This is a reverse peguin)
 
-[//]: # ()
-[//]: # (Arepa ipsum dolor amet jalabola! aenean sit tequeños se prendio esta mierdaa menool ladilla chamito;? Nisl nojoda eu amet in? Nisl cuál es la guachafita ni lava ni presta la batea háblame cloro gravida sifrino macundal panita; Sed háblame cloro nunc empanada ac coroto Na webona vladimil parchita? Cacique ladilla sit Se prendio el peo labia gravida Praesent tequeño. Qué paso mi pana?! elit parchita molleja aguacate vergación, háblame mollejúo chamito est burda mauris morbi;)
-
-[//]: # (---)
-
-[//]: # ()
-[//]: # (# What is Slidev?)
-
-[//]: # ()
-[//]: # (Slidev is a slides maker and presenter designed for developers `devs`, consist of the following features)
-
-[//]: # ()
-[//]: # (- 📝 **Text-based** - focus on the content with Markdown, and then style them later)
-
-[//]: # (- 🎨 **Themable** - theme can be shared and used with npm packages)
-
-[//]: # (- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion)
-
-[//]: # (- 🤹 **Interactive** - embedding Vue components to enhance your expressions)
-
-[//]: # (- 🎥 **Recording** - built-in recording and camera view)
-
-[//]: # (- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA)
-
-[//]: # (- 🛠 **Hackable** - anything possible on a webpage)
-
-[//]: # ()
-[//]: # (<br>)
-
-[//]: # (<br>)
-
-[//]: # ()
-[//]: # (Read more about [Why Slidev?]&#40;https://sli.dev/guide/why&#41;)
-
-[//]: # ()
-[//]: # (---)
-[//]: # ()
-[//]: # (# Navigation)
-
-[//]: # ()
-[//]: # (Hover on the bottom-left corner to see the navigation's controls panel)
-
-[//]: # ()
-[//]: # (### Keyboard Shortcuts)
-
-[//]: # ()
-[//]: # (|                                                      |                             |)
-
-[//]: # (| -------------------------------- | ----------------- |)
-
-[//]: # (| <kbd>space</kbd> / <kbd>tab</kbd> / <kbd>right</kbd> | next animation or slide     |)
-
-[//]: # (| <kbd>left</kbd>                                      | previous animation or slide |)
-
-[//]: # (| <kbd>up</kbd>                                        | previous slide              |)
-
-[//]: # (| <kbd>down</kbd>                                      | next slide                  |)
-
-[//]: # ()
-[//]: # (---)
-
-[//]: # (layout: new-section)
-
-[//]: # ()
-[//]: # (---)
-
-[//]: # ()
-[//]: # (# New wild section appeared)
-
-[//]: # ()
-[//]: # (![penguin-work]&#40;https://media.giphy.com/media/VkMV9TldsPd28/giphy.gif&#41;)
-
-[//]: # ()
-[//]: # (---)
-
-[//]: # (eventLogo: 'https://img2.storyblok.com/352x0/f/84560/2388x414/23d8eb4b8d/vue-amsterdam-with-name.png')
-
-[//]: # (eventUrl: 'https://vuejs.amsterdam/')
-
-[//]: # (twitter: '@alvarosabu')
-
-[//]: # (twitterUrl: 'https://twitter.com/alvarosabu')
-
-[//]: # ()
-[//]: # (---)
-[//]: # ()
-[//]: # (# Code)
-
-[//]: # ()
-[//]: # (Use code snippets and get the highlighting directly!)
-
-[//]: # ()
-[//]: # (```vue)
-
-[//]: # (<script setup>)
-
-[//]: # (import { TresCanvas } from '@tresjs/core')
-
-[//]: # (</script>)
-
-[//]: # ()
-[//]: # (<template>)
-
-[//]: # (  <TresCanvas)
-
-[//]: # (    clear-color="”#82DBC5”")
-
-[//]: # (    window-size)
-
-[//]: # (  >)
-
-[//]: # (    <TresPerspectiveCamera />)
-
-[//]: # (    <TresMesh)
-
-[//]: # (      @click="onClick")
-
-[//]: # (    >)
-
-[//]: # (      <TresBoxGeometry :args="[1, 1, 1]" />)
-
-[//]: # (      <TresMeshNormalMaterial />)
-
-[//]: # (    </TresMesh>)
-
-[//]: # (  </TresCanvas>)
-
-[//]: # (</template>)
-
-[//]: # (```)
-
-[//]: # ()
-[//]: # (---)
-
-[//]: # (layout: two-cols)
-
-[//]: # (---)
-
-[//]: # (Awiwiiw)
-
-[//]: # ()
-[//]: # (```vue)
-
-[//]: # (// Model.vue)
-
-[//]: # (<script setup lang="ts">)
-
-[//]: # (import { useAnimations, useGLTF } from '@tresjs/cientos')
-
-[//]: # ()
-[//]: # (const { scene: model, animations } = await useGLTF&#40;)
-
-[//]: # (  'models/ugly-bunny.gltf',)
-
-[//]: # (&#41;)
-
-[//]: # ()
-[//]: # (const { actions, mixer } = useAnimations&#40;animations, model&#41;)
-
-[//]: # (const currentAction = ref&#40;actions.Greeting&#41;)
-
-[//]: # (currentAction.value.play&#40;&#41;)
-
-[//]: # (</script>)
-
-[//]: # ()
-[//]: # (<template>)
-
-[//]: # (  <primitive :object="model" />)
-
-[//]: # (</template>)
-
-[//]: # (```)
-
-[//]: # ()
-[//]: # (::right::)
-
-[//]: # ()
-[//]: # (```vue)
-
-[//]: # (<template>)
-
-[//]: # (  <TresCanvas)
-
-[//]: # (    clear-color="”#82DBC5”")
-
-[//]: # (    window-size)
-
-[//]: # (  >)
-
-[//]: # (    <TresPerspectiveCamera />)
-
-[//]: # (    <Suspense>)
-
-[//]: # (      <Model />)
-
-[//]: # (    </Suspense>)
-
-[//]: # (  </TresCanvas>)
-
-[//]: # (</template>)
-
-[//]: # (```)
-
-[//]: # ()
-[//]: # (---)
-[//]: # (layout: two-thirds)
-
-[//]: # (---)
-
-[//]: # (Awiwiiw)
-
-[//]: # ()
-[//]: # (```vue)
-
-[//]: # (// Model.vue)
-
-[//]: # (<script setup lang="ts">)
-
-[//]: # (import { useAnimations, useGLTF } from '@tresjs/cientos')
-
-[//]: # ()
-[//]: # (const { scene: model, animations } = await useGLTF&#40;)
-
-[//]: # (  'models/ugly-bunny.gltf',)
-
-[//]: # (&#41;)
-
-[//]: # ()
-[//]: # (const { actions, mixer } = useAnimations&#40;animations, model&#41;)
-
-[//]: # (const currentAction = ref&#40;actions.Greeting&#41;)
-
-[//]: # (currentAction.value.play&#40;&#41;)
-
-[//]: # (</script>)
-
-[//]: # ()
-[//]: # (<template>)
-
-[//]: # (  <primitive :object="model" />)
-
-[//]: # (</template>)
-
-[//]: # (```)
-
-[//]: # ()
-[//]: # (::right::)
-
-[//]: # ()
-[//]: # (```vue)
-
-[//]: # (<template>)
-
-[//]: # (  <TresCanvas)
-
-[//]: # (    clear-color="”#82DBC5”")
-
-[//]: # (    window-size)
-
-[//]: # (  >)
-
-[//]: # (    <TresPerspectiveCamera />)
-
-[//]: # (    <Suspense>)
-
-[//]: # (      <Model />)
-
-[//]: # (    </Suspense>)
-
-[//]: # (  </TresCanvas>)
-
-[//]: # (</template>)
-
-[//]: # (```)
-
-[//]: # (---)
-
-[//]: # (layout: text-window)
-
-[//]: # ()
-[//]: # (---)
-
-[//]: # ()
-[//]: # (# Consoles)
-
-[//]: # ()
-[//]: # (Use code snippets and get the highlighting directly into a nice looking window!)
-
-[//]: # ()
-[//]: # (::window::)
-
-[//]: # ()
-[//]: # (```ts)
-
-[//]: # (// main.ts)
-
-[//]: # ()
-[//]: # (import { createDynamicForms } from '@asigloo/vue-dynamic-forms')
-
-[//]: # (import { createApp } from 'vue')
-
-[//]: # ()
-[//]: # (const VueDynamicForms = createDynamicForms&#40;{)
-
-[//]: # (  // Global Options go here)
-
-[//]: # (}&#41;)
-
-[//]: # ()
-[//]: # (export const app = createApp&#40;App&#41;)
-
-[//]: # ()
-[//]: # (app.use&#40;VueDynamicForms&#41;)
-
-[//]: # (```)
-
-[//]: # (---)
-
-[//]: # (layout: text-window)
-
-[//]: # (reverse: true)
-
-[//]: # (logoHeader: '/logo.svg')
-
-[//]: # (eventLogo: 'https://img2.storyblok.com/352x0/f/84560/2388x414/23d8eb4b8d/vue-amsterdam-with-name.png')
-
-[//]: # (eventUrl: 'https://vuejs.amsterdam/')
-
-[//]: # (twitter: '@alvarosabu')
-
-[//]: # (twitterUrl: 'https://twitter.com/alvarosabu')
-
-[//]: # (---)
-
-[//]: # ()
-[//]: # (# Embedded stuff)
-
-[//]: # ()
-[//]: # (Use window to show a live demo of any page, or even a sub component!)
-
-[//]: # ()
-[//]: # (::window::)
-
-[//]: # ()
-[//]: # (<div class="overflow-hidden relative w-full aspect-16-9">)
-
-[//]: # (<iframe height="300" style="width: 100%;" scrolling="no" title="Text Clock" src="https://codepen.io/searleb/embed/pvQaJB?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">)
-
-[//]: # (  See the Pen <a href="https://codepen.io/searleb/pen/pvQaJB">)
-
-[//]: # (  Text Clock</a> by Bill Searle &#40;<a href="https://codepen.io/searleb">@searleb</a>&#41;)
-
-[//]: # (  on <a href="https://codepen.io">CodePen</a>.)
-
-[//]: # (</iframe>)
-
-[//]: # (</div>)
-
-[//]: # (---)
-
-[//]: # (class: 'grid text-center align-self-center justify-self-center')
-
-[//]: # (---)
-
-[//]: # (# Gracias totales)
-
-[//]: # ()
-[//]: # ([Documentations]&#40;https://sli.dev&#41; / [GitHub Repo]&#40;https://github.com/slidevjs/slidev&#41;)
+<div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+  <div class="ultra-glass-card !p-12 relative overflow-hidden animate-border-glow max-w-4xl">
+    <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-50/30 to-transparent"></div>
+    
+    <h1 class="ultra-title !text-6xl mb-6 animate-float text-center">Thank You!</h1>
+    
+    <div class="grid grid-cols-1 gap-6 relative z-10">
+      <div class="animate-fade-in delay-200">
+        <p class="text-2xl text-blue-600 font-semibold animate-super-glow mb-4 text-center">Questions & Discussion</p>
+        <div class="flex justify-center gap-6 mt-4">
+          <div class="ultra-stats !py-3 !px-6 group">
+            <div class="text-3xl mb-2 group-hover:scale-110 transition-transform">📧</div>
+            <div class="font-bold text-blue-600">Contact</div>
+            <div class="text-sm text-gray-600">your.email@example.com</div>
+          </div>
+          <div class="ultra-stats !py-3 !px-6 group">
+            <div class="text-3xl mb-2 group-hover:scale-110 transition-transform">🌐</div>
+            <div class="font-bold text-blue-600">Website</div>
+            <div class="text-sm text-gray-600">www.yourwebsite.com</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="absolute -bottom-8 -right-8 text-9xl opacity-10 transform rotate-12">
+      🎉
+    </div>
+  </div>
+</div>
