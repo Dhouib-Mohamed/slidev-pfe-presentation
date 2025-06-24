@@ -10,7 +10,7 @@ css: unocss
 background: 'radial-gradient(circle at top left, #2563eb11, transparent), radial-gradient(circle at bottom right, #60a5fa11, transparent)'
 ---
 
-<div class="ultra-glass-card p-12 mb-8 animate-border-glow">
+<div class="p-12 mb-8 animate-border-glow">
   <h1 class="ultra-title animate-float mb-8">Improving Observability Efficiency</h1>
   <h2 class="text-3xl text-blue-600 animate-super-glow font-bold tracking-tight">in a Decentralized Cloud Environment</h2>
 </div>
@@ -18,14 +18,13 @@ background: 'radial-gradient(circle at top left, #2563eb11, transparent), radial
 ---
 layout: section
 zoom: 1
-transition: fade
 background: 'radial-gradient(circle at top right, #3b82f611, transparent), radial-gradient(circle at bottom left, #60a5fa11, transparent)'
 ---
-<div class="ultra-glass-card animate-scale" style="margin: 2rem auto; max-width: 800px;">
-  <h2 class="ultra-title text-center mb-8 animate-super-glow">
+<div style="margin: 2rem auto; max-width: 800px; font-size: 23px">
+  <h2 class="ultra-title text-center mb-8 animate-super-glow" style="font-size: 50px">
     {{ "Table of Contents" }}
   </h2>
-  <div class="p-6 rounded-2xl bg-white/50 backdrop-blur-sm border border-blue-100 shadow-xl">
+  <div class="p-6 rounded-2xl">
     <Toc maxDepth="2"/>
   </div>
 </div>
@@ -34,32 +33,28 @@ background: 'radial-gradient(circle at top right, #3b82f611, transparent), radia
 layout: title
 title: "Project Context"
 zoom: 1.15
-transition: slide-up
 chapter: 'Project Context'
 background: 'radial-gradient(circle at center, #3b82f611, transparent)'
 ---
 ---
 layout: text-image
 hideInToc: true
-media: '/images/ic.jpeg'
+media: '/images/ic.png'
 caption: 'Impossible Cloud Gmbh'
 class: 'content-center'
-transition: fade
 ---
 
-<div class="animate-fade-in h-full flex flex-col justify-center">
-  <h1 class="ultra-title mb-3 animate-super-glow">Hosting Company</h1>
+# Hosting Company
 
-  <div class="ultra-glass-card animate-border-glow !py-2 flex-shrink-0">
-    <h3 class="text-lg font-bold text-blue-600 mb-2">Revolutionizing cloud storage:</h3>
-    <ul class="ultra-list !space-y-1.5">
+### Revolutionizing cloud storage
+
+<ul class="ultra-list !space-y-1.5">
       <div class="grid grid-cols-1 gap-1.5">
         <li class="animate-slide-right delay-100 group !py-1.5 !px-3">
           <div class="flex items-center gap-2">
             <div class="text-xl text-blue-500 group-hover:scale-110 transition-transform">🚀</div>
             <div class="min-w-0">
               <div class="font-bold text-sm">Hot storage</div>
-              <div class="text-xs text-gray-600 truncate">Advanced data storage solutions</div>
             </div>
           </div>
         </li>
@@ -68,7 +63,6 @@ transition: fade
             <div class="text-xl text-blue-500 group-hover:scale-110 transition-transform">🛡️</div>
             <div class="min-w-0">
               <div class="font-bold text-sm">Durability</div>
-              <div class="text-xs text-gray-600 truncate">99.999999999% data durability</div>
             </div>
           </div>
         </li>
@@ -77,14 +71,11 @@ transition: fade
             <div class="text-xl text-blue-500 group-hover:scale-110 transition-transform">🔄</div>
             <div class="min-w-0">
               <div class="font-bold text-sm">S3 API compatibility</div>
-              <div class="text-xs text-gray-600 truncate">Seamless integration with cloud</div>
             </div>
           </div>
         </li>
       </div>
     </ul>
-  </div>
-</div>
 
 ---
 layout: text-image
@@ -92,7 +83,6 @@ hideInToc: true
 reverse: true
 media: '/images/infra.png'
 class: 'content-center'
-transition: slide-up
 ---
 
 <div class="animate-fade-in">
@@ -102,12 +92,12 @@ transition: slide-up
     <div class="grid grid-cols-2 gap-3">
       <div class="ultra-stats !py-2 animate-slide-up delay-100 group">
         <div class="ultra-number !text-xl group-hover:scale-110 transition-transform">01</div>
-        <div class="font-bold text-blue-600 text-sm">Platform</div>
+        <div class="font-bold text-sm">Platform</div>
         <div class="text-xs text-gray-600">Core infrastructure</div>
       </div>
       <div class="ultra-stats !py-2 animate-slide-up delay-200 group">
         <div class="ultra-number !text-xl group-hover:scale-110 transition-transform">02</div>
-        <div class="font-bold text-blue-600 text-sm">Infrastructure</div>
+        <div class="font-bold text-sm">Infrastructure</div>
         <div class="text-xs text-gray-600">Cloud solutions</div>
       </div>
       <div class="ultra-stats !py-2 animate-slide-up delay-300 group">
@@ -185,9 +175,35 @@ imgSmall: true
 # Problem Statement
 Scaling our observability stack introduces:
 
-* Soaring Costs
-* Performance Bottlenecks
-* Data Reliability
+
+<ul v-click class="ultra-list !space-y-1.5">
+      <div class="grid grid-cols-1 gap-1.5">
+        <li class="animate-slide-right delay-100 group !py-1.5 !px-3">
+          <div class="flex items-center gap-2">
+            <div class="text-xl text-blue-500 group-hover:scale-110 transition-transform">💸</div>
+            <div class="min-w-0">
+              <div class="font-bold text-sm">Soaring Costs</div>
+            </div>
+          </div>
+        </li>
+        <li class="animate-slide-right delay-200 group !py-1.5 !px-3">
+          <div class="flex items-center gap-2">
+            <div class="text-xl text-blue-500 group-hover:scale-110 transition-transform">🐢</div>
+            <div class="min-w-0">
+              <div class="font-bold text-sm">Performance Bottlenecks</div>
+            </div>
+          </div>
+        </li>
+        <li class="animate-slide-right delay-300 group !py-1.5 !px-3">
+          <div class="flex items-center gap-2">
+            <div class="text-xl text-blue-500 group-hover:scale-110 transition-transform">📉</div>
+            <div class="min-w-0">
+              <div class="font-bold text-sm">Data Reliability</div>
+            </div>
+          </div>
+        </li>
+      </div>
+    </ul>
 
 ---
 layout: text-image
@@ -198,11 +214,11 @@ imgSmall: true
 reverse: true
 ---
 # Project Objective
-Enhance observability efficiency and reliability in our decentralized cloud:
+Enhance observability efficiency and reliability:
 
-* Reduce Costs
-* Improve Performance
-* Ensure Reliability
+* **Reduce Costs**
+* **Improve Performance**
+* **Ensure Reliability**
 ---
 layout: default
 zoom: 1.15
@@ -219,15 +235,27 @@ Three key tracks:
 <div class="flex gap-20 justify-center text-center" style="margin-top: 2rem; align-items: flex-start;">
   <div v-click class="prose w-1/3 flex flex-col gap-3" style="align-items: center;">
     <img src="/images/track1/costs.png" alt="Track 1" class="h-25 object-contain" style="margin-bottom: 1rem;">
-    <div style="min-height: 3em;">Track 1: Tempo Cost Reduction</div>
+    <div style="min-height: 3em;">
+
+**Track 1:** Tempo Cost Reduction
+
+</div>
   </div>
   <div v-click class="prose w-1/3 flex flex-col gap-3" style="align-items: center;">
     <img src="/images/track2/perf.jpg" alt="Track 2" class="h-25 object-contain" style="margin-bottom: 1rem;">
-    <div style="min-height: 3em;">Track 2: Mimir Performance Optimization</div>
+    <div style="min-height: 3em;">
+
+**Track 2:** Mimir Performance Optimization
+
+</div>
   </div>
   <div v-click class="prose w-1/3 flex flex-col gap-3" style="align-items: center;">
     <img src="/images/track3/pipeline-problem.webp" alt="Track 3" class="h-25 object-contain" style="margin-bottom: 1rem;">
-    <div style="min-height: 3em;">Track 3: Telemetry Failover Management</div>
+    <div style="min-height: 3em;">
+
+**Track 3:** Telemetry Failover Management
+
+</div>
   </div>
 </div>
 ---
@@ -239,30 +267,33 @@ zoom: 1.15
 chapter: 'Track 1: Tempo Cost Reduction'
 ---
 ---
-layout: text-image
-zoom: 1.15
-imgSmall: true
-media: '/images/track1/tempo_costs.png'
-hideInToc: true
-
----
-# Introduction:
-
-Significant operational costs of Tempo:
-- ~60% of total costs
-
-**Goal:** Achieve substantial financial savings without compromising diagnostic value
----
 layout: image
 zoom: 1.15
 media: '/images/track1/old_arch.png'
-caption: 'Tempo Architecture'
+caption: 'Tempo Integration'
 ---
 ---
 layout: text-image
 zoom: 1.15
+imgLater: true
+media: '/images/track1/tempo_costs.png'
 hideInToc: true
-reverse: true
+---
+# Introduction:
+
+**High Tempo costs ( 60% of total observability costs) :**
+- 🏋 Increased operational overhead
+- 🤔 Questionable cost-effectiveness
+
+<div v-click>
+
+**Goal:** Achieve substantial financial savings without compromising diagnostic value
+
+</div>
+---
+layout: text-image
+zoom: 1.15
+hideInToc: true
 media: '/images/track1/cost_distribution.png'
 ---
 # Problem Analysis:
@@ -273,6 +304,7 @@ media: '/images/track1/cost_distribution.png'
 layout: text-image
 zoom: 1.15
 hideInToc: true
+reverse: true
 media: '/images/track1/received_bandwidth.png'
 
 ---
@@ -280,47 +312,58 @@ media: '/images/track1/received_bandwidth.png'
 
 * Compactor generated >90% of used bandwidth
 
-=> **Cost driver:** Data retrieval (GET) operations by the compactor
+<div v-click style="padding-top: 10px">
+
+ **Hypothesis:** Main cost source is Data retrieval operations by the compactor
+
+</div>
 ---
 zoom: 1.15
 hideInToc: true
 ---
 # Root Cause Determination
+<div v-click>
 
 **AWS S3 Cost Structure:**
 * Egress Outside AWS S3 Network is Charged heavily
 * Egress within AWS S3 Network is Free
+
+</div>
+<div v-click>
 
 **Compactor Component Behavior:**
 
 * Full scans of trace data in S3
 * Rewrites optimized blocks back to S3
 
+</div>
 ---
 layout: new-section
 zoom: 1.15
 hideInToc: true
 ---
 ## Root Cause: 
+<div v-click>
+
 ### Massive data egress from S3 to external network locations driven by compaction operations
+
+</div>
 ---
+layout: text-image
 zoom: 1.15
 hideInToc: true
-
+media: '/images/track1/new_arch.png'
+caption: 'Tempo Proposed Architecture'
 ---
 # Proposed Architecture
+<div v-click>
 
 ### Core solution: 
 Relocate Tempo compactor within AWS network.
-### Objective: 
-Leveraging free internal S3 data transfers within AWS network.
 
----
-layout: image
-zoom: 1.15
-media: '/images/track1/new_arch.png'
-caption: 'Tempo New Architecture'
----
+**Objective:** Leveraging free internal S3 data transfers within AWS network.
+
+</div>
 ---
 layout: text-image
 zoom: 1.15
@@ -328,17 +371,7 @@ hideInToc: true
 media: '/images/track1/results.png'
 ---
 # Results and Impact
-* **Cost Reduction**: 96% reduction in monthly Tempo costs
----
-zoom: 1.15
-hideInToc: true
----
-# Conclusion
-**Key Achievements:**
-* Significant Cost Savings
-* Enhanced Efficiency
-
-**Future Considerations**: Further optimizations across other observability components.
+**Cost Reduction:** 96% reduction in monthly Tempo costs
 ---
 layout: title
 title: "Track 2: Mimir Performance Optimization"
@@ -354,23 +387,32 @@ hideInToc: true
 media: '/images/track2/mimir_grafana.png'
 ---
 # Introduction
+<div v-click>
 
-* Performance bottlenecks within Mimir
-* **Goal:** Reduce query latency for Mimir
+**Significant Grafana dashboard loading times (>60s):**
+* 😕 Degraded user experience
+* 📊 Degraded monitoring efficiency
 
+</div>
+<div v-click style="padding-top: 10px">
+
+**Goal:** Reduce query latency for metrics
+
+</div>
 ---
 zoom: 1.15
 hideInToc: true
 
 ---
 # Problem Analysis
+- High query latency in mimir from problematic dashboards
+- Queries in question show multiple aggregations of high-cardinality metrics
 
-Significant Grafana dashboard loading times (>60s):
-* Degraded user experience 
-* Degraded monitoring efficiency
+<div v-click style="padding-top: 10px">
 
-**Reason:** 
-high cardinality queries
+**Hypothesis:** Complex queries within Mimir
+
+</div>
 
 ---
 zoom: 1.15
@@ -378,12 +420,13 @@ hideInToc: true
 
 ---
 # Experiment Setup
-
+<div v-click>
 Structured test framework crucial for accurate measurement and validation
 
 **Assessment Metrics:**
 * Average Query Latency
 * Dashboard Visual Consistency
+</div>
 ---
 zoom: 1.15
 hideInToc: true
@@ -395,14 +438,17 @@ hideInToc: true
   * Periodic high-cardinality queries.
   * latency data saved for analysis.
 
+<div v-click>
+
 **Grafana Dashboards Manual Test:**
   * Manually loaded a problematic dashboard
   * Recorded loading times & checked for visual inconsistencies
+
+</div>
 ---
 zoom: 1.15
 hideInToc: true
 layout: text-image
-imgSmall: true
 media: '/images/track2/initial_results.png'
 
 ---
@@ -410,9 +456,13 @@ media: '/images/track2/initial_results.png'
 
 **Hypothesis:** Reduce data retrieval times by manipulating configuration
 
+<div v-click>
+
 **Results:** Minimal improvement (\~5%)
 
 => Fine-tuning insufficient
+
+</div>
 
 ---
 layout: default
@@ -421,23 +471,45 @@ hideInToc: true
 ---
 
 # Investigation: Mimir Internals
+<div v-click>
 
 **Production Tracing:** Collecting spans for slow queries
+
+</div>
+<div v-click>
 
 **Production Profiling:** 
   * Memory profiling
   * CPU profiling
 
+</div>
+
+<div v-click>
+
 **Codebase/Issue Review:** 
   * Issues Analysis
   * Codebase deep dive
+
+</div>
 ---
 layout: new-section
 zoom: 1.15
 hideInToc: true
 ---
 ## Root Cause:
-### Not a specific bug or lack of optimization in Mimir, But Inherent computational cost for high-cardinality metrics over long time ranges with small `step`
+<div v-click>
+
+### Inherent computational cost for high-cardinality metrics over long time ranges with small `step`
+
+</div>
+
+---
+layout: image
+zoom: 1.15
+hideInToc: true
+media: '/images/track2/query_logic.png'
+caption: 'Query Handling Logic'
+---
 
 ---
 layout: image
@@ -446,6 +518,7 @@ hideInToc: true
 media: '/images/track2/solution.png'
 caption: 'Proposed Solution: Dynamic Step Middleware'
 ---
+
 ---
 layout: text-image
 zoom: 1.15
@@ -455,9 +528,18 @@ media: '/images/track2/final_results.png'
 
 # Results
 
+Integrated dynamic step logic into Mimir query frontend
+<div v-click>
+
 * Significant latency reduction for high-cardinality queries
-* Problematic dashboard latency reduced \~17-19%
+
+</div>
+<div v-click>
+
+* Problematic dashboard latency reduced **\~19-21%**
 * No visual inconsistencies observed
+
+</div>
 
 ---
 layout: text-image
@@ -470,19 +552,13 @@ imgSmall: true
 # Outcome: Upstream Integration Attempt
 We decided to implement the solution as a middleware in Mimir query frontend
 
+<div v-click>
+
 **Reasons for Non-Integration:**
 * Prometheus API incompatibility
 * Out of Mimir's core scope
----
-zoom: 1.15
-hideInToc: true
----
-# Conclusion
-**Key Achievements:**
-* Understanding Mimir system internals
-* Solution Logic for dynamic step handling
 
-**Future work:** Explore other ways of implementing dynamic step logic
+</div>
 
 ---
 layout: title
@@ -496,12 +572,20 @@ zoom: 1.15
 hideInToc: true
 layout: text-image
 media: '/images/track3/arch.png'
+imgSmall: true
 ---
 # Introduction
 
-* Inherent reality in distributed environments: unavailability scenarios
-* Critical problem of data loss during unavailabilities
-* **Goal:** Enhance reliability of telemetry data delivery
+**Telemetry data loss caused by unavailability scenarios:**
+* 🔍 Slower Troubleshooting
+* 🙍‍♂️ Customer Support Degredation
+* ⚖️ Regulatory Compliance Risks
+
+<div v-click style="padding-top: 10px">
+
+**Goal:** Enhance reliability of telemetry data delivery
+
+</div>
 
 ---
 zoom: 1.15
@@ -515,16 +599,6 @@ Collectors Inefficiencies not made for extended outages:
 * Incomplete Disk Persistence
 
 ---
-zoom: 1.15
-hideInToc: true
----
-# Critical Impact of the Problem
-
-* Slower Troubleshooting
-* Customer Support Degredation
-* Regulatory Compliance Risks
-
----
 layout: text-image
 zoom: 1.15
 media: '/images/track3/solution_arch.png'
@@ -533,7 +607,7 @@ hideInToc: true
 ---
 # Solution Logic
 
-conditional routing layer based on Observability health status
+### conditional routing layer based on observability health status
 
 ---
 zoom: 1.15
@@ -560,7 +634,7 @@ media: '/images/track3/alloy_workflow.png'
 ---
 # Grafana Alloy Implementation
 
-Dynamic routing by Hot Reloading the collector configuration
+### Hot Reloading Grafana Alloy configuration
 ---
 zoom: 1.15
 hideInToc: true
@@ -570,7 +644,7 @@ media: '/images/track3/fluentbit_workflow.png'
 ---
 # FluentBit Implementation
 
-Conditional logic via _Lua_ filter plugin + lightweight sidecar script
+### Custom Lua Script in the Fluent Bit pipeline
 ---
 zoom: 1.15
 hideInToc: true
@@ -578,23 +652,13 @@ hideInToc: true
 ---
 # Results
 
-**Successful Implementation**: Failover management system deployed across both Grafana Alloy and Fluent Bit collectors
+**Successful Implementation**: 
+
+Failover management system deployed across both Grafana Alloy and Fluent Bit collectors
 
 **Operational Impact**:
-* Enhanced Reliability
 * Improved Operational Resilience
 * Increased Confidence
----
-zoom: 1.15
-hideInToc: true
----
-# Conclusion
-**Key Achievements:**
-* Reliable Telemetry Data Delivery
-* Enhanced Operational Resilience
-
-**Future Considerations**: Improving health check mechanisms and failover strategies
-
 ---
 layout: title
 title: "Conclusion"
@@ -608,57 +672,45 @@ zoom: 1.15
 hideInToc: true
 ---
 # Achievements
-* **Track 1:** 96% cost reduction in Tempo
-* **Track 2:** 20% dashboard latency reduction ( Not Integrated )
-* **Track 3:** Reliable telemetry delivery during outages
+<div style="padding: 20px">
+
+* 💰 **96%** cost reduction in Tempo
+
+</div>
+<div v-click style="padding: 20px">
+
+* ⚡ **~ 20%** dashboard latency reduction ( Not Integrated )
+
+</div>
+
+<div v-click style="padding: 20px">
+
+* 📦 **Reliable** telemetry delivery during outages
+
+</div>
 ---
 zoom: 1.15
 hideInToc: true
 ---
 # Future Directions
-* **Track 1:** Further optimizations across other observability components
-* **Track 2:** Alternative implementations of dynamic step logic for Mimir
-* **Track 3:** Enhancing telemetry failover strategies and health check mechanisms
----
-zoom: 1.15
-hideInToc: true
----
-# Sources
-* [Grafana Tempo Documentation](https://grafana.com/docs/tempo/latest/)
+<div style="padding: 20px">
 
+* 🌐 Trying presented solutions across other observability components
+
+</div>
+<div v-click style="padding: 20px">
+
+* 🧠 Alternative implementations of dynamic step logic for Mimir
+
+</div>
+<div v-click style="padding: 20px">
+
+* 🛡️ Enhancing telemetry failover strategies and health check mechanisms
+
+</div>
 ---
 zoom: 1.15
 layout: full-image
 media: '/images/thank_you.png'
-background: 'radial-gradient(circle at center, #2563eb11, transparent), radial-gradient(circle at top right, #60a5fa11, transparent), radial-gradient(circle at bottom left, #3b82f611, transparent)'
 ---
-
-<div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-  <div class="ultra-glass-card !p-12 relative overflow-hidden animate-border-glow max-w-4xl">
-    <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-50/30 to-transparent"></div>
-    
-    <h1 class="ultra-title !text-6xl mb-6 animate-float text-center">Thank You!</h1>
-    
-    <div class="grid grid-cols-1 gap-6 relative z-10">
-      <div class="animate-fade-in delay-200">
-        <p class="text-2xl text-blue-600 font-semibold animate-super-glow mb-4 text-center">Questions & Discussion</p>
-        <div class="flex justify-center gap-6 mt-4">
-          <div class="ultra-stats !py-3 !px-6 group">
-            <div class="text-3xl mb-2 group-hover:scale-110 transition-transform">📧</div>
-            <div class="font-bold text-blue-600">Contact</div>
-            <div class="text-sm text-gray-600">your.email@example.com</div>
-          </div>
-          <div class="ultra-stats !py-3 !px-6 group">
-            <div class="text-3xl mb-2 group-hover:scale-110 transition-transform">🌐</div>
-            <div class="font-bold text-blue-600">Website</div>
-            <div class="text-sm text-gray-600">www.yourwebsite.com</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="absolute -bottom-8 -right-8 text-9xl opacity-10 transform rotate-12">
-      🎉
-    </div>
-  </div>
-</div>
+---

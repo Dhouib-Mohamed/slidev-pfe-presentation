@@ -1,11 +1,11 @@
 <script setup lang="ts">
 const chapters = [
   { title: 'Project Context', start: 3 },
-  { title: 'Problem Analysis', start: 6 },
+  { title: 'Problem Analysis', start: 7 },
   { title: 'Track 1 ', start: 12 },
-  { title: 'Track 2', start: 23 },
-  { title: 'Track 3', start: 35 },
-  { title: 'Conclusion', start: 48 },
+  { title: 'Track 2', start: 21 },
+  { title: 'Track 3', start: 33 },
+  { title: 'Conclusion', start: 41 },
 ]
 </script>
 
@@ -16,6 +16,7 @@ const chapters = [
       :key="chapter.title"
       class="chapter"
       :class="{ active: $slidev.nav.currentPage >= chapter.start && $slidev.nav.currentPage < (chapters[idx + 1]?.start || Infinity) }"
+      v-on:click="console.log('Navigating to chapter:', chapter.title); $slidev.nav.goto(chapter.start)"
     >
       {{ chapter.title }}
     </div>
@@ -24,15 +25,13 @@ const chapters = [
 
 <style scoped>
 .chapter-slider {
-  margin: 2rem auto 0.5rem;
+  margin: 1.5rem auto 0;
   width: fit-content;
   align-self: center;
   display: flex;
   gap: 0.5rem;
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 1rem;
   padding: 0.5rem 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  font-size: 0.9rem;
 }
 .chapter {
   font-weight: 500;
@@ -41,7 +40,9 @@ const chapters = [
   margin: auto 1rem;
 }
 .chapter.active {
-  color: #222;
-  text-decoration: underline;
+  background: rgba(82, 99, 95, 0.4);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
 }
 </style>

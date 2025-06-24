@@ -4,8 +4,7 @@
 
       <img
           :src="$attrs.media"
-          class="rounded-lg object-cover"
-          style="min-height:45vh;"
+          style="height:55vh;"
       />
   </div>
 </template>

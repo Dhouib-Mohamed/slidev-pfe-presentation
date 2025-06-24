@@ -1,8 +1,8 @@
 /* Professional Theme Enhancements */
 :root {
-  --primary-color: #2563eb;
-  --secondary-color: #1d4ed8;
-  --accent-color: #3b82f6;
+  --primary-color: #000000;
+  --secondary-color: #17372d;
+  --accent-color: #209360;
   --text-color: #1f2937;
   --background-light: #f3f4f6;
 }
@@ -89,7 +89,7 @@ code {
 
 /* Image Containers */
 .slidev-layout img {
-  @apply rounded-lg shadow-md transition-transform duration-300;
+  @apply rounded-lg transition-transform duration-300;
 }
 
 .slidev-layout img:hover {

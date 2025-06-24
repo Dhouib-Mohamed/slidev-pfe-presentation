@@ -1,5 +1,5 @@
 <template>
-  <div class="slidev-layout intro grid">
+  <div class="slidev-layout intro grid " style="margin-top: 0; padding-top: 0">
     <CornerCurves class="absolute left-0 top-0 transform rotate-90" />
     <div class="flex flex-col justify-center text-center">
       <div class="flex justify-between items-start w-full px-0 pt-0" style="margin-bottom: 0.1em; margin-top: 0 ">
@@ -37,7 +37,7 @@
 
         <div class="col-span-2 flex flex-col items-center">
           <h3 class="text-md font-semibold">Internship Company:</h3>
-          <img :src="'/images/ic.jpeg'" alt="Impossible Cloud Logo" class="h-16 mb-1 mt-2">
+          <img :src="'/images/ic.png'" alt="Impossible Cloud Logo" class="h-16 mb-1 mt-2">
         </div>
       </div>
 

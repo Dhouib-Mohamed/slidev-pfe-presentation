@@ -7,17 +7,18 @@ import SlideNumber from "../components/SlideNumber.vue";
 <template>
   <ChapterSlider />
 
-  <div class="bg-section slidev-layout new-section">
+  <div class="bg-section slidev-layout new-section" style="padding-top: 0">
     <figure class="flex flex-col justify-center text-center items-center"
     >
-      <img
-          :src="$attrs.media"
-          class="rounded-lg object-cover"
-          style="max-height: 30vh; max-width: 100%;"
-      />
-      <figcaption class="mt-2 text-4 w-full text-center font-bold p-4">
+      <figcaption class="mt-2 text-6 w-full text-center font-bold p-5">
         {{ $attrs.caption }}
       </figcaption>
+      <img
+          v-click
+          :src="$attrs.media"
+          class="rounded-lg object-cover"
+          style="max-height: 26vh; max-width: 100%;"
+      />
     </figure>
   </div>
   <AsGraphic
