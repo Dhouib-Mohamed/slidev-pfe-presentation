@@ -4,7 +4,7 @@
 
       <img
           :src="$attrs.media"
-          style="height:55vh;"
+          style="height:45vh;"
       />
   </div>
 </template>
